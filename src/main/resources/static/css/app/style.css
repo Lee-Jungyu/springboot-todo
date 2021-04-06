@@ -1,0 +1,115 @@
+div.content-body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.todo-item {
+    height: 120px;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+button.todo-item-button {
+    width: 20px;
+    height: 20px;
+    margin-top:5px;
+    margin-right: 5px;
+    float: right;
+    font-size: 15px;
+    line-height: 0px;
+    padding: 0px;
+    text-align: center;
+}
+div.todo-item-id {
+    display: none;
+    height: 30px;
+    width: 30px;
+    padding-right:10px;
+    font-size: 20px;
+    margin-right: 20px;
+    float: left;
+    padding-left: 0px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+div.todo-item-title {
+    padding-left: 15px;
+    height: 67%;
+    font-size: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+div.todo-item-bottom {
+    height: 33%;
+    font-size: 20px;
+}
+div.todo-item-author {
+    padding-left: 15px;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: #ff0;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+div.todo-item-createdDate {
+    padding-left: 15px;
+    width: 50%;
+    height: 100%;
+    float: right;
+    background: #0ff;
+}
+div.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+div.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%
+}
+.modal-bottom {
+    height: 40px;
+}
+.modal-bottom-left {
+    float: left;
+    width: 49%;
+}
+.modal-bottom-right {
+    float: right;
+    width: 49%;
+}
+div.div-content {
+    width: 70%;
+}
+.post-title {
+    font-size: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.post-middle {
+    height: 40px;
+    font-size: 20px;
+}
+.post-author {
+    width: 29%;
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+.post-createdDate {
+    width: 70%;
+    float: right;
+    text-align: right;
+}
+.post-content {
+    font-size: 20px;
+    word-break: break-word;
+}

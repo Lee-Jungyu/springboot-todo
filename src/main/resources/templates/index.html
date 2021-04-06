@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Post</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <header th:replace="fragment/header :: headerFragment"></header>
+    <div class="content-body">
+        <h1>Todo</h1>
+        <div style="height: auto; overflow: hidden">
+            <button type="button" class="btn btn-primary" id="btn-create" style="float: right">글 등록</button>
+        </div>
+        <ul th:each="post : ${posts}">
+            <th:block th:insert="component/post-item :: todoFragment(${post})"></th:block>
+        </ul>
+    </div>
+    <div class="modal">
+        <div class="modal-content div-form-create">
+            <form autocomplete="off">
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="text" class="form-control create-title" placeholder="제목을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label>작성자</label>
+                    <input type="text" class="form-control create-author" placeholder="작성자를 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label>내용</label>
+                    <textarea class="form-control create-content" placeholder="내용을 입력하세요"></textarea>
+                </div>
+            </form>
+            <div class="modal-bottom">
+                <button type="button" class="btn btn-secondary modal-bottom-left btn-cancel">취소</button>
+                <button type="button" class="btn btn-primary modal-bottom-right" id="btn-save-create">등록</button>
+            </div>
+        </div>
+        <div class="modal-content div-form-update">
+            <form autocomplete="off">
+                <div class="update-id" style="display: none"></div>
+                <div class="form-group">
+                    <label>제목</label>
+                    <input type="text" class="form-control update-title" placeholder="제목을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label>내용</label>
+                    <textarea class="form-control update-content" placeholder="내용을 입력하세요"></textarea>
+                </div>
+            </form>
+            <div class="modal-bottom">
+                <button type="button" class="btn btn-secondary modal-bottom-left btn-cancel">취소</button>
+                <button type="button" class="btn btn-primary modal-bottom-right" id="btn-save-update">수정</button>
+            </div>
+        </div>
+        <div class="modal-content div-content">
+            <div style="height: auto; overflow: hidden">
+                <button type="button" class="btn btn-secondary btn-cancel todo-item-button">X</button>
+            </div>
+            <div class="post-title"></div>
+            <hr>
+            <div class="post-middle">
+                <div class="post-author"></div>
+                <div class="post-createdDate"></div>
+            </div>
+            <hr>
+            <div class="post-content"></div>
+        </div>
+    </div>
+
+    <footer th:replace="fragment/footer :: footerFragment"></footer>
+</body>
+</html>

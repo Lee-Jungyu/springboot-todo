@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="todo-item" th:fragment="todoFragment (${post})">
+    <div>
+        <button type="button" class="btn btn-danger todo-item-button btn-delete">🗑</button>
+        <button type="button" class="btn btn-warning todo-item-button btn-update">🖋️</button>
+    </div>
+    <div class="todo-item-id" th:text="${post.id}"></div>
+    <div class="todo-item-title" th:text="${post.title}"></div>
+    <div class="todo-item-bottom">
+        <div class="todo-item-author" th:text="${post.author}"></div>
+        <div class="todo-item-createdDate" th:text="${post.createdDate}"></div>
+    </div>
+</div>
+</html>
