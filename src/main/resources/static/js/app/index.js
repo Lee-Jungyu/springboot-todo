@@ -29,8 +29,8 @@ var index = {
         $('.btn-cancel').on('click', function() {
             _modal.css('display', 'none');
         })
-        $('.todo-item').on('click', function() {
-            var id = $(this).children('.todo-item-id').html();
+        $('.todo-item-title').on('click', function() {
+            var id = $(this).siblings('.todo-item-id').html();
             $('.modal-content').css('display', 'none');
             $('.div-content').css('display', 'block');
             _modal.css('display', 'block');
